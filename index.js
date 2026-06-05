@@ -12,9 +12,9 @@ app.use(cors({
 app.use(express.json());
 
 // Routes
-app.use('/api/auth', require('./src/routes/auth'));
-app.use('/api/locations', require('./src/routes/locations'));
-app.use('/api/routes', require('./src/routes/routes'));
+app.use('/auth', require('./src/routes/auth'));
+app.use('/locations', require('./src/routes/locations'));
+app.use('/routes', require('./src/routes/routes'));
 
 // Health check
 app.get('/health', (req, res) => res.json({ status: 'ok' }));
